@@ -1,9 +1,10 @@
 import React from 'react'
-import './footer.css'
 import {ReactComponent as Linkedin} from "../../../Utility/icons/lkdn.svg" 
 import {ReactComponent as Facebook} from "../../../Utility/icons/fb.svg" 
 import {ReactComponent as Insta} from "../../../Utility/icons/insta.svg" 
 import {ReactComponent as Youtube} from "../../../Utility/icons/yt.svg" 
+import './footer.css'
+
 function Footer() {
   return (
     <>
