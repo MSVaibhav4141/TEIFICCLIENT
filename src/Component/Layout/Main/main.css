@@ -107,9 +107,9 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-  bottom: 0%;
+  bottom: 10%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 10%);
   animation: floating ease-in-out 1.5s infinite;
 }
 
@@ -235,24 +235,24 @@
 }
 @keyframes floating {
   0% {
-    transform: translate(-50%, 0%) rotate(360deg);
+    transform: translate(-50%, -25%) rotate(360deg);
   }
   50% {
-    transform: translate(-50%, 15%) rotate(360deg);
+    transform: translate(-50%, -8%) rotate(360deg);
   }
   100% {
-    transform: translate(-50%, 0%) rotate(360deg);
+    transform: translate(-50%, -25%) rotate(360deg);
   }
 }
 @keyframes floating1 {
   0% {
-    transform: translate(0%, -5%) rotate(360deg);
+    transform: translate(0%, -10%) rotate(360deg);
   }
   50% {
-    transform: translate(0%, 15%) rotate(360deg);
+    transform: translate(0%, 10%) rotate(360deg);
   }
   100% {
-    transform: translate(0%, -5%) rotate(360deg);
+    transform: translate(0%, -10%) rotate(360deg);
   }
 }
 
