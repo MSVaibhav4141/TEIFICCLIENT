@@ -1,22 +1,20 @@
-.about{
-    overflow: hidden;
-    position: relative;
+.about {
+  overflow: hidden;
+  position: relative;
 }
 
-.about_wrapper{
-        width: 650vw;
-        /* background-color: rgba(0, 0, 0, 0.952); */
-        /* background-color: rgba(168, 255, 255, 0.341); */
-        background-image: linear-gradient(90deg,#fff 55%,#5ACECE);    }
-    
-    section {
-        padding: 20vw 18vw;
-        display: flex;
-        align-items: center;
-        height: 100vh;
-        
-    }
-    
-    .sectionss p {
-    font-size: 15vw;
-  }
+.about_wrapper {
+  width: 650vw;
+  background-image: linear-gradient(90deg, #fff 55%, #5acece);
+}
+
+section {
+  padding: 20vw 18vw;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.sectionss p {
+  font-size: 15vw;
+}

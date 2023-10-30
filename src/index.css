@@ -1,11 +1,11 @@
 * {
   padding: 0%;
   margin: 0;
-  font-family: 'Estedad', 'Gothic A1','Almarai', sans-serif;
+  font-family: "Estedad", "Gothic A1", "Almarai", sans-serif;
   box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
