@@ -87,8 +87,8 @@
 .mouse{
     position: absolute;
     bottom: 135%;
-    left: 48%;
-    transform: translate(-48%, -135%);
+    left: 50%;
+    transform: translate(-50%, -135%);
     z-index: 1;
     height:50px;
     animation: fades .5s linear forwards, floating ease-in-out 1.5s infinite;
