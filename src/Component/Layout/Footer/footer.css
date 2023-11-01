@@ -37,8 +37,8 @@
   border-radius: 15px;
   overflow: hidden;
   background-color: #191919;
-  padding-top: 3vw;
   color: rgba(255, 255, 255, 0.694);
+  padding-top: 3vw;
 }
 .links_all {
   width: 100%;
@@ -61,21 +61,30 @@
 .adress {
   display: flex;
   align-items: center;
-  font-size: 0.5vw;
+  font-size: 0.7em;
 }
 .footer_links {
   margin: 1vw 5vw;
   list-style: none;
-  font-weight: 500;
 }
 
-.footer_links li:first-child {
+.footer_links a{
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.694);
+
+}
+
+.footer_links > li:nth-child(1){
   font-weight: 300;
-  font-size: 0.8vw;
+  font-size: 0.8em;
   margin-bottom: 1vw;
   color: rgb(168, 168, 168);
 }
 
+.footer_links a li{
+  font-weight: 500 
+}
 .all_policies {
   height: 100%;
   display: flex;

@@ -39,31 +39,30 @@ function Footer() {
             <div className="links_all">
               <ul className="footer_links">
                 <li>Explore</li>
-                <li>EvoSwap</li>
-                <li>airHwak</li>
-                <li>Grow Minder</li>
-                <li>CrowdTracker</li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>EvoSwap</li></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>airHwak</li></a>             
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Grow Minder</li></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>CrowdTracker</li></a>
               </ul>
               <ul className="footer_links">
                 <li>Ownership</li>
-                <li>Teific Pvt. Ltd</li>
-                <li>Teific Corporation</li>
+               <a href="http://" target="_blank" rel="noopener noreferrer"> <li>Teific Technology Pvt. Ltd</li></a>
               </ul>
               <ul className="footer_links">
                 <li>Partnership</li>
-                <li>Retail Partnership</li>
-                <li>TATA Group</li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Retail Partnership</li></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Ambuvians</li></a>
               </ul>
               <ul className="footer_links">
                 <li>Support</li>
-                <li>FAQs</li>
-                <li>Help & Support</li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>FAQs</li></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Help & Support</li></a>
               </ul>
               <ul className="footer_links">
                 <li>Company</li>
-                <li>Team</li>
-                <li>Careers</li>
-                <li>Blog</li>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Team</li></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Careers</li></a>
+                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Blog</li></a>
               </ul>
             </div>
             <div className="policy_section">
@@ -81,19 +80,14 @@ function Footer() {
               <div className="adress">
                 <div className="adress_office">
                   <p>Registered Office Address</p>
-                  Ather Energy Private Limited, 3rd Floor, Tower D, IBC
-                  Knowledge Park, #4/1, Bannerghatta Main Road, Bangalore,
-                  Karnataka 560029, India
+                  Mf-1, First Floor, 9/15, Ved Homes, Sector- 3, Rajendra Nagar, Ghaziabad,(U.P)201005, India
                 </div>
                 <div className="adress_office">
-                  <p>Tel No: +91-7676600900</p>
+                  <p>Tel No: +91 9971105343</p>
                   <p>Contact Person: Manager - Customer Services</p>
                   <p>
                     For Customer Support please write to :
-                    customercare@atherenergy.com
-                  </p>
-                  <p>
-                    For general inquiry please write to : info@atherenergy.com
+                    support@teific.in
                   </p>
                 </div>
               </div>

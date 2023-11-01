@@ -192,7 +192,7 @@ function Main() {
         <div className="center">
           <div className="box_content">
             <span className="name_left" id="evo_left">
-              EVO
+              EVI
             </span>
             <span className="name_right ">SWAP</span>
           </div>
