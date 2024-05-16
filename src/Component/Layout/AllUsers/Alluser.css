@@ -1,0 +1,8 @@
+.user-img > img {
+  object-fit: cover;
+}
+.user-img {
+  width: 21vmax;
+  height: 21vmax;
+  aspect-ratio: 1/1;
+}

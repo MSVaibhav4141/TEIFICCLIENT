@@ -23,12 +23,15 @@ function Growing() {
           "img",
           {
             scale: 1,
-          },
+          }, 
           "e"
         )
         .from(
           "h2",
           {
+
+            left: "50%",
+            top: "50%",
             scale: 0,
             opacity: 0,
             duration: 2,

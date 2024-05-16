@@ -1,0 +1,35 @@
+._service-container > div {
+  width: 2.2vmax;
+  height: 2.5vmax;
+  color: #2bede2;
+}
+._service-container > p {
+  font-size: 1.05vmax;
+  font-weight: 600;
+}
+
+._service-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1vmax;
+}
+
+@media (max-width: 1000px) {
+  ._service-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1vmax;
+  }
+  ._service-container > div {
+    width: 4vmax;
+    min-height: 5vmax;
+  }
+  ._service-container > p {
+    font-size: 1.8vmax;
+    font-weight: 500;
+  }
+}

@@ -1,66 +1,72 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SplitType from "split-type";
 import "./about.css";
+import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);
-function About() {
+function Growing() {
   const about = useRef();
+  const aboutPara = useRef();
   useLayoutEffect(() => {
+    const text = new SplitType(aboutPara.current, {types:"chars,words"})
+    const splittedText = text.chars;
     let ctx = gsap.context(() => {
-      const text = new SplitType(".sectionss p", { types: "chars" });
-      gsap.to(".sectionss", {
-        xPercent: -100,
-        ease: "none",
+      let tl1 = gsap.timeline({
         scrollTrigger: {
-          trigger: ".about_wrapper",
-          pin: true,
+          trigger: about.current,
+          start: "-20% 50%",
+          end: "80% 50%",
+          markers:false,
           scrub: 1,
-          end: "+=3000",
+
         },
       });
-      gsap.from(".about_wrapper", {
-        backgroundImage:
-          "linear-gradient(45deg,rgba(0, 0, 0, 0.956) 10%, rgba(0, 0, 0, 1) 55%)",
-        duration: 1,
-        scrollTrigger: {
-          trigger: ".about_wrapper",
-          scrub: 2,
-          start: "top left",
-          end: "+=3000",
-        },
-      });
-      gsap.from(text.chars, {
-        opacity: 0,
-        stagger: 0.3,
-        transformOrigin: "top",
-        color: "white",
-        y: -80,
-        duration: 2,
-        scrollTrigger: {
-          trigger: ".about_wrapper",
-          scrub: 2,
-          start: "top left",
-          end: "+=2000",
-        },
-      });
-    });
+
+      tl1
+        .from(
+          splittedText,
+          {
+            scaleY:0,
+            y:-20,
+            transformOrigin:'top',
+            stagger:0.1,
+            duration:2
+          }, 
+          "e"
+        )
+        .from(
+          ".about_wrapper",
+          {
+            backgroundImage: "linear-gradient(90deg, #fff 55%, #5acece)",
+            duration:10
+          }, 
+          "e"
+        )
+        .from(
+          "h2",
+          {
+            scale: 0,
+            opacity: 0,
+            duration: 2,
+          },
+          "e"
+        );
+    }, about);
     return () => ctx.revert();
   }, []);
-
   return (
-    <div className="about" ref={about}>
-      <div className="about_wrapper">
-        <section className="sectionss">
-          <p>
+      <div className="about" ref={about}>
+      <div className="about_wrapper"> 
+        <section className="sectionss"  >
+          <p ref={aboutPara}> 
             We At Teific Transforming the Way You Live, Drive, and Grow with
             Innovative Technologies
           </p>
-        </section>
+        </section> 
       </div>
     </div>
   );
 }
 
-export default About;
+export default Growing;

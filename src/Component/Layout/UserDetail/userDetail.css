@@ -1,0 +1,13 @@
+._user-pfpc{
+    width: 8vmax;
+    height: 8vmax;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+._user-pfpc > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}

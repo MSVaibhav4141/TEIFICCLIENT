@@ -1,0 +1,33 @@
+.popUpLoder {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loaderIcon {
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1000px) {
+  .popUpLoder {
+    height: 3vmax;
+    font-size: 2vmax;
+  }
+  .loaderIcon {
+    font-size: 2vmax !important;
+  }
+}

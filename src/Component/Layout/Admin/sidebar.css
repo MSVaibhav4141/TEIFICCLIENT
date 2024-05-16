@@ -1,0 +1,83 @@
+._tree-view {
+  display: flex;
+}
+
+._admin-panel {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-height: 80vh;
+}
+._admin-panel > a:first-child {
+  display: flex;
+  align-items: center;
+}
+._admin-panel a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.493);
+  font: 200 1rem "Roboto";
+  padding: 2rem;
+  transition: all 0.5s;
+}
+
+.MuiTreeItem-content {
+  transition: all 0.5s;
+  padding: 0;
+}
+
+._admin-panel a:hover,
+.MuiTreeItem-content:hover {
+  color: #1b8e8e;
+  transform: scale(1.1);
+}
+
+._admin-panel a > P {
+  display: flex;
+  align-items: center;
+}
+
+._admin-panel a > p > svg {
+  margin-right: 0.5rem;
+}
+.MuiTreeItem-root {
+  padding: 4rem 0;
+}
+.MuiCollapse-wrapperInner > a {
+  padding: 0 !important;
+}
+
+.MuiSimpleTreeView-root {
+  padding: 1.6rem !important;
+}
+
+.MuiTreeItem-content {
+  background-color: #fff !important;
+  color: rgba(0, 0, 0, 0.493);
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  font-size: 1.5em !important;
+}
+
+._toggle-admin-panel-button {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  ._admin-panel {
+    grid-template-columns: 1fr;
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    left: -100vw;
+    top: 0;
+    z-index: 2000;
+    transition: left 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  ._toggle-admin-panel {
+    left: 0px;
+  }
+}

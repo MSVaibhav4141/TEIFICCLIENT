@@ -1,0 +1,9 @@
+._speeddialicon {
+  font-size: 27px !important;
+  color: rgb(46, 61, 61);
+  height: 0;
+}
+
+.css-7dv1rb-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab {
+  width: 0px !important;
+}

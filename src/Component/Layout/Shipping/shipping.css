@@ -1,0 +1,115 @@
+.shippingBox {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+._shippingBox {
+    background-color: white;
+    width: 25vw;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  ._shipping-heading {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.664);
+    font: 400 1.3vmax "Roboto";
+    padding: 1.3vmax;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    width: 50%;
+    margin: auto;
+  }
+  
+  .shipping-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 80%;
+    transition: all 0.5s;
+  }
+  
+  .shipping-form > div {
+    display: flex;
+    width: 100%;
+    background-color: antiquewhite;
+    align-items: center;
+  }
+  
+  .shipping-form > div > input,
+  .shipping-form > div > select {
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font-weight: 300;
+    outline: none;
+  }
+  
+  .shipping-form > div > svg {
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 1.6vmax;
+    color: rgba(0, 0, 0, 0.623);
+  }
+  
+  .shippingBtn {
+    border: none;
+    background-color: #B8F2F1;
+    color: white;
+    font-size: 1vw;
+    font-weight: 300;
+    width: 100%;
+    padding: 1vmax;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+    margin: 2vmax;
+  }
+  
+  .shippingBtn:hover {
+    background-color: #62fffc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    ._shippingBox {
+      width: 100vw;
+      height: 95vh;
+    }
+  
+    ._shipping-heading {
+        font-size: 6vw;
+        font-weight: 400;
+      padding: 5vw;
+    }
+  
+    .shipping-form {
+      padding: 11vw;
+    }
+  
+    .shipping-form > div > input,
+    .shipping-form > div > select {
+      padding: 5vw 10vw;
+      font-size: 4vw;
+      font-weight: 300;
+    }
+  
+    .shipping-form > div > svg {
+      font-size: 6vw;
+      transform: translateX(3vw);
+    }
+  
+    .shippingBtn {
+        font-size: 4vw;
+        font-weight: 300;
+      padding: 4vw;
+    }
+  }

@@ -25,3 +25,19 @@
   text-align: center;
   letter-spacing: 2vw;
 }
+@media (max-width:1000px){
+  .grow_container {
+    width: 98%;
+    height: 50vh;
+    position: relative;
+  }
+  .grow_container h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    font-size: 3vmax;
+    color: rgb(175, 175, 175);
+    text-align: center;
+  }
+}

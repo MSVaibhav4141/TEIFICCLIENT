@@ -10,45 +10,8 @@ function Aim() {
   const aim_content = useRef();
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      const text = new SplitType(".aim_content p", { types: "chars" });
-
-      let tl1 = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".aim_content",
-          start: "-10% 50%",
-          end: "80% 50%",
-          scrub: 2,
-          markers: true,
-        },
-      });
-
-      tl1
-        .from(
-          text.chars,
-          {
-            opacity: 0.2,
-            stagger: 0.1,
-            color: "white",
-          },
-          "a"
-        )
-        .from(
-          ".aim_content_cover_top",
-          {
-            y: "-100%",
-            duration: 2,
-          },
-          "a"
-        )
-        .from(
-          ".aim_content_cover_bottom",
-          {
-            y: "100%",
-            duration: 2,
-          },
-          "a"
-        );
-    }, aim_wraper);
+      
+    }, );
     return () => ctx.revert();
   }, []);
 
@@ -69,7 +32,7 @@ function Aim() {
           <p>We Are Team Teific Ready To Revolutionize Your World</p>
         </div>
       </div>
-    </>
+    </> 
   );
 }
 

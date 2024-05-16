@@ -1,0 +1,274 @@
+._create-products-admin {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  /* max-height: 100vh; */
+  /* overflow: hidden; */
+  /* position: sticky; */
+  min-height: 100vh;
+}
+.newProductContainer {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgb(221, 221, 221);
+  border-left: 1px solid rgba(0, 0, 0, 0.158);
+  display: flex;
+  max-height: 100vh;
+  overflow-y: scroll;
+  flex-direction: column;
+  padding: 5vmax;
+  /* height: 150vh; */
+  /* overflow-y: scroll; */
+}
+.newProductContainer h1 {
+  color: rgba(0, 0, 0, 0.733);
+  font: 300 2rem "Roboto";
+  text-align: center;
+}
+
+.createProductForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3vmax;
+  justify-content: space-evenly;
+  width: 40vw;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+}
+
+.createProductForm > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  margin: 0.5vmax 0;
+}
+
+.servicesAvaialble {
+  flex-direction: column;
+  align-items: start !important;
+  border: 0.5px solid rgb(177, 177, 177);
+  border-radius: 4px;
+  padding: 1vmax;
+}
+.servicesAvaialble > h3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: rgb(102, 102, 102);
+  font-size: 0.9vmax;
+  font-weight: 400;
+}
+.servicesAvaialble > h3 > svg {
+  margin-right: 1.5vmax;
+}
+.servicesAvaialble > div {
+  display: flex;
+  align-items: center;
+  color: rgb(134, 134, 134);
+  margin: 0.5vmax 3vmax;
+}
+.servicesAvaialble > div > label {
+  font-size: 0.9vmax;
+  font-weight: 300;
+}
+.servicesAvaialble > div > input {
+  margin-right: 1vmax;
+}
+.servicesAvaialble > div > svg {
+  width: 1vmax;
+  aspect-ratio: 1 / 1;
+  margin-right: 0.3vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+.createProductForm > div > input,
+.createProductForm > div > select,
+.createProductForm > div > textarea {
+  padding: 1vmax 4vmax;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.267);
+  border-radius: 4px;
+  font: 300 0.9vmax;
+  outline: none;
+}
+
+.createProductForm > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.6vmax;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+#createProductFormFile > input {
+  display: flex;
+  padding: 0%;
+}
+
+#createProductFormFile > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  height: 3vmax;
+  border: none;
+  margin: 0%;
+  font: 400 0.8vmax;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  color: rgba(0, 0, 0, 0.623);
+  background-color: rgb(255, 255, 255);
+}
+
+#createProductFormFile > input::file-selector-button:hover {
+  background-color: rgb(235, 235, 235);
+}
+
+#createProductFormImage {
+  width: 100%;
+  overflow: auto;
+}
+
+#createProductFormImage > img {
+  width: 3vmax;
+  margin: 0 0.5vmax;
+  height: 3vmax;
+  object-fit: cover;
+  object-position: center;
+}
+#createProductBtn {
+  border: none;
+  background-color: rgb(143, 214, 207);
+  color: white;
+  font: 300 0.9vmax "Roboto";
+  width: 100%;
+  padding: 0.8vmax;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+}
+
+#createProductBtn:hover {
+  background-color: rgb(67, 210, 223);
+}
+
+._toggle-input-transition {
+  transition: all 0.3s;
+  text-align: center;
+  margin-left: 1vmax;
+  border-radius: 4px;
+}
+
+.loadingIcon {
+  display: none !important;
+}
+.loadingIconInitiate {
+  display: block;
+  font-size: 1.8vmax !important;
+  animation: spin 2.3s linear infinite;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 1000px) {
+  ._create-products-admin {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+  .newProductContainer {
+    background-color: rgb(255, 255, 255);
+    width: 100vw;
+    padding: 2vmax;
+  }
+  .createProductForm {
+    padding: 3vmax;
+    width: 100%;
+  }
+  .createProductForm > div {
+    margin: 1vmax 0;
+  }
+  .createProductForm > div > input,
+  .createProductForm > div > select,
+  .createProductForm > div > textarea {
+    padding: 2.5vmax 5vmax;
+    font: 300 1.7vmax;
+  }
+
+  .createProductForm > div > svg {
+    font-size: 2.8vmax;
+  }
+
+  #createProductFormFile > img {
+    width: 8vmax;
+    border-radius: 100%;
+  }
+
+  #createProductFormFile > input::file-selector-button {
+    height: 7vmax;
+    font: 400 1.8vmax;
+  }
+
+  #createProductBtn {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+    margin: 2vmax 0;
+  }
+
+  .servicesAvaialble {
+    flex-direction: column;
+    align-items: start !important;
+    border: 0.9px solid rgb(177, 177, 177);
+    border-radius: 4px;
+    padding: 1vmax;
+  }
+  .servicesAvaialble > h3 {
+    font-size: 1.8vmax;
+  }
+  .servicesAvaialble > h3 > svg {
+    margin-right: 1vmax;
+    font-size: 3.5vmax !important;
+  }
+  .servicesAvaialble > div {
+    display: flex;
+    align-items: center;
+    color: rgb(134, 134, 134);
+    margin: 0.5vmax 3vmax;
+  }
+  .servicesAvaialble > div > label {
+    font-size: 2vmax;
+    font-weight: 300;
+  }
+  .servicesAvaialble > div > input {
+    margin-right: 1vmax;
+    width: 10vmax;
+    font-size: 1vmax;
+    border-radius: 0px;
+    border: 0.5px solid;
+  }
+  .servicesAvaialble > div > svg {
+    width: 2vmax;
+    aspect-ratio: 1 / 1;
+    margin-right: 0.3vmax;
+    color: rgba(0, 0, 0, 0.623);
+  }
+  #createProductFormImage > img {
+    width: 8vmax;
+    margin: 0 0.5vmax;
+    height: 8vmax;
+    object-fit: cover;
+    object-position: center;
+  }
+}

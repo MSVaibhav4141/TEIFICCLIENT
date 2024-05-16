@@ -1,0 +1,20 @@
+.greenColor {
+  color: rgb(0, 255, 60);
+}
+.redColor {
+  color: rgb(0, 0, 0);
+}
+
+._order-Id {
+  color: black;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+._launch-icon {
+  font-size: 1.3em !important;
+  color: rgb(155, 155, 155);
+  margin-left: 0.2em;
+}

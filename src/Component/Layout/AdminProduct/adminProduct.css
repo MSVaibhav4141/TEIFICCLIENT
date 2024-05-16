@@ -1,0 +1,120 @@
+._all-products-admin {
+  width: 100vw;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  /* max-height: 100vh; */
+  /* overflow: hidden; */
+  /* position: sticky; */
+}
+._admin-panel-product-id {
+  color: rgb(16, 25, 29);
+  font-size: 0.8em;
+  text-align: center;
+}
+._admin-products-list {
+  border-left: 1px solid rgba(0, 0, 0, 0.13);
+  background-color: rgb(255, 255, 255);
+  padding: 1rem 0;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.admin-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+._admin-panel-product {
+  width: 70vw;
+  overflow: hidden;
+  background-color: rgb(170, 236, 236);
+  border-radius: 0 0 3vmax 3vmax;
+  margin: 2em auto;
+}
+._admin-panel-product-details {
+  border-radius: 2vmax;
+  display: flex;
+  width: 100%;
+  height: 18vmax;
+  overflow: hidden;
+  background-color: rgb(243, 243, 243);
+}
+._ap-product-image {
+  width: 35%;
+  background-color: white;
+  border-radius: 2vmax;
+}
+._ap-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+._ap-product-detail {
+  margin-left: 2vmax;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+._ap-product-detail p:first-child {
+  font-size: 1.5em;
+}
+._ap-product-detail p:nth-child(2) {
+  font-size: 1.2em;
+}
+._ap-product-detail p:nth-child(3) {
+  font-size: 1.2em;
+}
+._ap-product-detail > a {
+  color: black;
+}
+.MuiButton-root > .css-i4bv87-MuiSvgIcon-root {
+  font-size: 1em;
+}
+
+@media (max-width: 1000px) {
+  ._admin-products-list {
+    border-left: 0;
+    width: 100vw;
+  }
+  ._admin-panel-product {
+    width: 95vw;
+    border-radius: 0 0 1vmax 1vmax;
+    margin: 1em auto;
+  }
+  ._admin-panel-product-details {
+    border-radius: 1vmax;
+    min-height: 24vmax;
+  }
+
+  ._ap-product-image {
+    min-width: 35%;
+    border-radius: 0vmax;
+  }
+
+  ._ap-product-detail {
+    margin-left: 1.5vmax;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  ._ap-product-detail p:first-child {
+    letter-spacing: 0.5px;
+    font-size: 1em;
+  }
+  ._ap-product-detail p:nth-child(2) {
+    font-size: 0.8em;
+  }
+  ._ap-product-detail p:nth-child(3) {
+    font-size: 0.6em;
+  }
+  ._ap-product-detail p:nth-child(4) {
+    font-size: 0.6em;
+  }
+  .MuiButton-root > .css-i4bv87-MuiSvgIcon-root {
+    font-size: 0.8em;
+  }
+}

@@ -1,0 +1,65 @@
+._review-modal {
+  display: flex;
+  height: 30vmax;
+}
+
+._img-modal-section {
+  width: 30vmax;
+}
+
+._review-modal-section {
+  position: relative;
+  width: 25vmax;
+  padding: 1vmax;
+}
+._review-modal-section > div {
+  line-height: 1;
+  display: flex;
+}
+
+._review-modal-section > p:last-child {
+  /* padding: 10px 0; */
+  margin-top: 0.1vw;
+  font-weight: 4 00;
+}
+._review-modal-section > p:nth-child(2) {
+  margin-top: 0.1vw;
+  color: grey;
+  font-size: 0.8vmax;
+  font-weight: 500;
+}
+._review-modal-section > div > img {
+  width: 2.5vmax;
+  border-radius: 50%;
+  height: 2.5vmax;
+  margin-right: 5px;
+}
+
+._cross {
+  position: absolute;
+  top: 0px;
+  margin: 3px;
+  right: 0px;
+  width: 1.8vmax;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+._cross:hover {
+  scale: 0.8;
+}
+
+@media (max-width: 1000px) {
+  ._review-modal {
+    flex-direction: column;
+    height: 70vmax;
+    width: 90vw;
+  }
+  ._img-modal-section {
+    width: 90vw;
+  }
+}

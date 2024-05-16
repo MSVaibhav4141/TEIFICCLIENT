@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useRef } from "react";
 import { ReactComponent as Linkedin } from "../../../Utility/icons/lkdn.svg";
 import { ReactComponent as Facebook } from "../../../Utility/icons/fb.svg";
 import { ReactComponent as Insta } from "../../../Utility/icons/insta.svg";
 import { ReactComponent as Youtube } from "../../../Utility/icons/yt.svg";
 import "./footer.css";
 function Footer() {
+  const footer_link_ref = useRef([]);
+    function handle_link_click(index) {
+      footer_link_ref.current.forEach((container, i) => {
+        if (i === index) {
+          container.classList.toggle("active-footer-link");
+        } else {
+          container.classList.add("active-footer-link");
+        }
+      });
+    }
   return (
     <>
       <div className="footer">
@@ -38,31 +48,96 @@ function Footer() {
           <div className="link_content">
             <div className="links_all">
               <ul className="footer_links">
-                <li>Explore</li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>EvoSwap</li></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>airHwak</li></a>             
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Grow Minder</li></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>CrowdTracker</li></a>
+                <li onClick={() => handle_link_click(0)}>
+                  Explore
+                  <span>+</span>
+                </li>
+                <div
+                  className="_footer-link-container active-footer-link"
+                  ref={(el) => (footer_link_ref.current[0] = el)}
+                >
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>EvoSwap</li>
+                  </a>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>airHwak</li>
+                  </a>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>Grow Minder</li>
+                  </a>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>CrowdTracker</li>
+                  </a>
+                </div>
               </ul>
               <ul className="footer_links">
-                <li>Ownership</li>
-               <a href="http://" target="_blank" rel="noopener noreferrer"> <li>Teific Technology Pvt. Ltd</li></a>
+                <li onClick={() => handle_link_click(1)}>
+                  Ownership
+                  <span>+</span>
+                </li>
+                <div
+                  className="_footer-link-container active-footer-link"
+                  ref={(el) => (footer_link_ref.current[1] = el)}
+                >
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    {" "}
+                    <li>Teific Technology Pvt. Ltd</li>
+                  </a>
+                </div>
               </ul>
               <ul className="footer_links">
-                <li>Partnership</li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Retail Partnership</li></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Ambuvians</li></a>
+                <li onClick={() => handle_link_click(2)}>
+                  Partnership
+                  <span>+</span>
+                </li>
+                <div
+                  className="_footer-link-container active-footer-link"
+                  ref={(el) => (footer_link_ref.current[2] = el)}
+                >
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>Retail Partnership</li>
+                  </a>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>Ambuvians</li>
+                  </a>
+                </div>
               </ul>
               <ul className="footer_links">
-                <li>Support</li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>FAQs</li></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Help & Support</li></a>
+                <li onClick={() => handle_link_click(3)}>
+                  Support
+                  <span >+</span>
+                </li>
+                <div
+                  className="_footer-link-container active-footer-link"
+                  ref={(el) => (footer_link_ref.current[3] = el)}
+                >
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>FAQs</li>
+                  </a>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>Help & Support</li>
+                  </a>
+                </div>
               </ul>
               <ul className="footer_links">
-                <li>Company</li>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Team</li></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Careers</li></a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"><li>Blog</li></a>
+                <li  onClick={() => handle_link_click(4)}>
+                  Company
+                  <span>+</span>
+                </li>
+                <div
+                  className="_footer-link-container active-footer-link"
+                  ref={(el) => (footer_link_ref.current[4] = el)}
+                >
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>Team</li>
+                  </a>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>Careers</li>
+                  </a>
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <li>Blog</li>
+                  </a>
+                </div>
               </ul>
             </div>
             <div className="policy_section">
@@ -80,14 +155,14 @@ function Footer() {
               <div className="adress">
                 <div className="adress_office">
                   <p>Registered Office Address</p>
-                  Mf-1, First Floor, 9/15, Ved Homes, Sector- 3, Rajendra Nagar, Ghaziabad,(U.P)201005, India
+                  Mf-1, First Floor, 9/15, Ved Homes, Sector- 3, Rajendra Nagar,
+                  Ghaziabad,(U.P)201005, India
                 </div>
                 <div className="adress_office">
                   <p>Tel No: +91 9971105343</p>
                   <p>Contact Person: Manager - Customer Services</p>
                   <p>
-                    For Customer Support please write to :
-                    support@teific.in
+                    For Customer Support please write to : support@teific.in
                   </p>
                 </div>
               </div>

@@ -1,0 +1,131 @@
+._breakdown-price > p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+._togglePrice {
+  height: 70% !important;
+}
+
+.order-panel {
+  justify-content: space-between !important;
+}
+
+._breakdown-price {
+  display: flex;
+  flex-direction: column;
+  height: 0%;
+  justify-content: space-around;
+  overflow: hidden;
+  width: 15vw;
+  transition: 0.3s ease-in-out;
+}
+._ap-order-detail {
+  margin-left: 1vmax;
+  height: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 38%;
+}
+
+._ap-order-detail > a > p {
+  font-size: 1.2vmax;
+  font-weight: 600;
+}
+._ap-order-detail > a > p > span {
+  font-size: 1vmax;
+  color: rgb(162, 186, 231);
+}
+
+._ap-order-detail p:nth-child(2) {
+  font-size: 1.2em;
+}
+._ap-order-detail p:nth-child(3) {
+  font-size: 1.2em;
+}
+._ap-order-detail > a {
+  color: black;
+}
+._total-price {
+  margin-right: 1vmax;
+  cursor: pointer;
+  height: 100%;
+}
+
+._total-price > p {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1vmax;
+  transition: 0.2s;
+}
+._total-price > p:hover {
+  color: rgb(163, 163, 163);
+}
+
+._ap-order-image {
+  width: 35%;
+  background-color: white;
+  border-radius: 2vmax;
+}
+._ap-order-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.ap-order-button {
+  position: relative !important;
+}
+.orderBy {
+  font-size: 1vmax !important;
+}
+@media (max-width: 1000px) {
+  ._ap-order-detail {
+    margin-left: 1.5vmax;
+  }
+  .orderBy {
+    font-size: 1.1vmax !important;
+  }
+  ._ap-order-detail p:first-child {
+    letter-spacing: 0.4px;
+    font-size: 1.5vmax;
+  }
+  ._ap-order-detail p:nth-child(2) {
+    font-size: 0.8em;
+  }
+  ._ap-order-detail p:nth-child(3) {
+    font-size: 0.6em;
+  }
+  ._ap-order-detail p:nth-child(4) {
+    font-size: 0.6em;
+  }
+
+  ._total-price {
+    margin-right: 1vmax;
+    font-size: 1.2vmax;
+    width: 15vmax;
+  }
+  ._ap-order-image {
+    width: 27%;
+    border-radius: 1vmax;
+  }
+  .ap-order-button > svg {
+    width: 2vmax !important;
+  }
+  .ap-order-button {
+    width: 3vmax !important;
+  }
+  ._breakdown-price {
+    display: flex;
+    flex-direction: column;
+    height: 0%;
+    justify-content: space-around;
+    overflow: hidden;
+    width: 15vmax;
+    transition: 0.3s ease-in-out;
+  }
+}

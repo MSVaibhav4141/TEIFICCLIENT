@@ -1,20 +1,33 @@
 .about {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: antiquewhite;
   overflow: hidden;
   position: relative;
 }
 
 .about_wrapper {
-  width: 610vw;
-  background-image: linear-gradient(90deg, #fff 55%, #5acece);
+  padding: 5vmax;
+  background-image: linear-gradient(90deg, #bde4e4 15%, #5acece);
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  /* background-image: linear-gradient(90deg, #fff 55%, #5acece); */
+  min-height: 100vh;
 }
-
-section {
-  padding: 20vw 0vw;  
+.sectionss{
+  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  height: 100vh;
 }
 
 .sectionss p {
-  font-size: 15vw;
+  text-align: left;
+  line-height: 2.2;
+  font-weight: 400;
+  color: rgb(72, 72, 72);
+  font-size: 5vmax;
 }

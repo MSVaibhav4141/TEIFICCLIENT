@@ -1,0 +1,208 @@
+._navbar {
+  top: 0%;
+  width: 100vw;
+  height: 60px;
+  font-size: 1.5vw;
+  font-weight: 800;
+  letter-spacing: 0.5vw;
+  color: rgb(209, 209, 209);
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  /* overflow: hidden; */
+  /* margin-bottom: 50px; */
+}
+._navbar-content {
+  width: 100%;
+  align-items: center;
+  font-size: 2vmax;
+  font-weight: 600;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0em 2vmax;
+}
+
+._navbar-right span {
+  color: #10948c;
+}
+
+._navbar-left {
+  height: 100%;
+  display: flex;
+}
+._navbar-left > ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 300;
+  font-size: clamp(10px, 16px, 25px);
+  list-style: none;
+  position: relative;
+  height: 100%;
+  gap: 2em;
+}
+
+.user_navbar {
+  width: 25px;
+  margin-top: 6px;
+}
+
+.links {
+  text-decoration: none;
+  color: rgb(209, 209, 209);
+  position: relative;
+}
+
+._search-bar {
+  display: flex;
+  width: 40vw;
+  background-color: transparent;
+}
+._search-bar > form {
+  position: relative;
+  width: 100%;
+  height: 38px;
+}
+._search-bar > form > input {
+  width: 100%;
+  height: 38px;
+  padding-right: 35px;
+  padding-left: 10px;
+  font-size: 1.3em;
+  color: #b8b8b8;
+  border: 0;
+  font-weight: 300;
+}
+._search-bar > form > input::placeholder {
+  text-align: right;
+}
+
+._search-bar > form > input:focus {
+  outline: none;
+}
+._search-bar > form > button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 38px;
+  width: 30px;
+  color: rgb(54, 54, 54);
+  background-color: rgb(78, 149, 145);
+  font-weight: 100;
+  display: flex;
+  padding: 3px;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  transition: 0.2s ease-in-out;
+}
+._search-bar > form > button:hover {
+  background-color: rgb(93, 191, 184);
+  font-weight: 300;
+}
+
+._user-account {
+  position: relative;
+  height: 60px;
+  width: 22px;
+}
+
+._user-account-o {
+  position: absolute;
+  top: 43%;
+  right: 2px;
+  transform: translate(0, -43%);
+  font-size: 27px !important;
+  color: rgb(46, 61, 61);
+}
+
+._cart-item-count > li {
+  position: relative;
+}
+._cart-item-count > li > div {
+  position: absolute;
+  top: -4px;
+  right: -2px;
+  width: 15px;
+  height: 15px;
+  font-size: 0.8vmax;
+  font-weight: 500;
+  display: flex;
+  letter-spacing: 0;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+  border-radius: 100%;
+}
+._cart-item-count > li > div > span {
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  ._cart-item-count > li > div {
+    font-size: 1.5vmax;
+  }
+  ._navbar {
+    height: 50px;
+    margin-bottom: 35px;
+    /* margin-bottom: 50px; */
+  }
+  ._navbar-left > ul {
+    position: static;
+  }
+  ._search-bar {
+    position: absolute;
+    left: 0px;
+    top: 43px;
+    height: 45px;
+    background-color: #b8f2f1;
+    width: 100%;
+  }
+  ._search-bar > form {
+    position: relative;
+    width: 90%;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    height: 30px;
+    font-size: 1.5vmax;
+  }
+
+  ._navbar-right {
+    font-size: 3vmax;
+  }
+  /* ._navbar {
+    display: block;
+  }
+
+
+  ._navbar-content {
+    border-bottom: 1px solid white;
+    width: 100%;
+    align-items: center;
+    font-size: 1vmax;
+    font-weight: 600;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vmax;
+  }
+
+  ._search-bar {
+    width: 65vw;
+  }
+
+  ._search-bar > form > input {
+    font-size: 2.5vmax;
+    padding-right: 4vmax;
+  }
+  ._search-bar > form > button {
+    width: 17px;
+  }
+
+  ._mobile-view > ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  } */
+}
