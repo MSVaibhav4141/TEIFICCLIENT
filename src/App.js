@@ -35,20 +35,6 @@ import PrivateRoute from "./Component/Route/PrivateRoute.jsx";
 
 import "./App.css";
 function App() {
-  // useEffect(() => {
-  //     Webfront.load({
-  //       custom: {
-  //         families: ["Estedad"],
-  //         urls: ["./utility/Font/font.css"],
-  //       },
-  //       google: {
-  //         families: [
-  //           "Gothic A1:100,200,300,400,500,600,700,800,900",
-  //           "Almarai: 300, 400, 700, 800",
-  //         ],
-  //       },
-  //     });
-  //   }, []);
   useEffect(() => {
     store.dispatch(loadUser());
   });
@@ -80,12 +66,7 @@ function App() {
           <Route path="/account" element={<Profile />} />
           <Route
             path="/payment/success"
-            element={
-              <PaymentSuccess
-                amountPaid="$100"
-                buyerName="John Doe"
-              />
-            }
+            element={<PaymentSuccess amountPaid="$100" buyerName="John Doe" />}
           />
           <Route path="/user/update" element={<UpdateProfile />} />
           <Route path="/user/privacy" element={<UpdatePassword />} />

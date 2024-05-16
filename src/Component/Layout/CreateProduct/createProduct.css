@@ -3,9 +3,6 @@
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  /* max-height: 100vh; */
-  /* overflow: hidden; */
-  /* position: sticky; */
   min-height: 100vh;
 }
 .newProductContainer {
@@ -18,8 +15,6 @@
   overflow-y: scroll;
   flex-direction: column;
   padding: 5vmax;
-  /* height: 150vh; */
-  /* overflow-y: scroll; */
 }
 .newProductContainer h1 {
   color: rgba(0, 0, 0, 0.733);

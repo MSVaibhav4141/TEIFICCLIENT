@@ -13,9 +13,7 @@ import "./sidebar.css";
 const Sidebar = ({ isShown }) => {
   return (
     <>
-      {/* <div className={buttonState} onClick={handleAdminPanel}>
-        &gt;
-      </div> */}
+
       <div className={`_admin-panel ${isShown ? "_toggle-admin-panel" : ""}`}>
         <Link to="/admin/dashboard">
           <DashboardIcon />

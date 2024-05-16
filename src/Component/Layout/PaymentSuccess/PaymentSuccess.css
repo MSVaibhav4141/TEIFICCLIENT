@@ -1,4 +1,3 @@
-/* src/components/PaymentSuccess.css */
 
 .payment-success {
     display: flex;
@@ -11,7 +10,7 @@
   .success-animation {
     width: 100px;
     height: 100px;
-    background-color: #4caf50; /* Green color for success */
+    background-color: #4caf50; 
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -35,7 +34,7 @@
   }
   
   .success-info h2 {
-    color: #4caf50; /* Green color for success */
+    color: #4caf50;
   }
   @media (max-width:1000px) {
     .success-animation {

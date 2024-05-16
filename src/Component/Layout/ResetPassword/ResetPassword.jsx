@@ -54,12 +54,12 @@ const ResetPassword = () => {
       ) : (
         <>
           <MetaData title="Forgot Password" />
-          <div className="_left-profile-section-password">
-            <div className="_login-signup-container">
-              <div className="_form-container-reset-password">
-                <form className="_signup-form" onSubmit={udpateProfileSubmit}>
-                  <div className="_reset-password">
-                    <LockOpenIcon className="_form-icon" />
+          <div className="resetPasswordContainer">
+            <div className="resetPasswordBox">
+            <h2 className="resetPasswordHeading">Update Profile</h2>
+                <form className="resetPasswordForm" onSubmit={udpateProfileSubmit}>
+                  <div>
+                    <LockOpenIcon />
                     <input
                       type="password"
                       name="password"
@@ -69,8 +69,8 @@ const ResetPassword = () => {
                       onChange={(e) => setNewPassword(e.target.value)}
                     />
                   </div>
-                  <div className="_reset-password">
-                    <LockOutlinedIcon className="_form-icon" />
+                  <div className="loginPassword">
+                    <LockOutlinedIcon  />
                     <input
                       type="password"
                       name="password"
@@ -81,9 +81,8 @@ const ResetPassword = () => {
                     />
                   </div>
 
-                  <button type="submit-reset">Change Password</button>
+                  <button type="submit-reset" className="resetPasswordBtn">Change Password</button>
                 </form>
-              </div>
             </div>
           </div>
         </>

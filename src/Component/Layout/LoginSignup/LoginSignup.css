@@ -173,7 +173,6 @@ input[type="password"] {
   transition: 0.3s ease-in;
 }
 
-/* helper classes */
 
 ._valid-password {
   max-height: 0vmax;
@@ -298,66 +297,3 @@ input[type="password"] {
     color: rgb(65, 65, 65);
   }
 }
-/* @media (max-width: 1000px) and (max-height: 600px) {
-  ._login-signup-container {
-    min-height: 80vmax;
-  }
-
-  ._signup-form button {
-    width: 80%;
-    height: 8vmax;
-    margin-top: 4vmax;
-    font-size: 2vmax;
-  }
-
-  ._form-container {
-    width: 50%;
-    height: 72vmax;
-  }
-  ._login-signup-form input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    min-height: 6vmax;
-    padding-left: 3.5vmax;
-    font-size: 1.5vmax;
-  }
-  ._user-avatar {
-    min-height: 6vmax;
-  }
-  ._login-signup-selection {
-    display: flex;
-    min-height: 5vmax;
-  }
-  ._login-signup-form a {
-    font-size: 1.3vmax;
-  }
-  ._login-email,
-  ._login-password {
-    margin-top: 2vmax;
-    width: 90%;
-  }
-  ._signup-email,
-  ._signup-password,
-  ._signup-name,
-  ._signup-phone {
-    width: 90%;
-    margin-top: 2vmax;
-  }
-
-  ._login-signup-form button {
-    width: 80%;
-    min-height: 6vmax;
-  }
-  ._user-avatar > img {
-    width: 3.5vmax;
-  }
-  ._user-avatar > input::file-selector-button {
-    min-height: 4vmax;
-  }
-  ._login-signup-form input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    padding-left: 5vmax;
-    font-size: 2vmax;
-  }
-} */

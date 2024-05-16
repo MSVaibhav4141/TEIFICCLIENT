@@ -167,7 +167,6 @@
   transition: 0.3s ease-in-out;
 }
 ._filter-sort > div  button:hover{
-  /* background-color: transparent; */
   padding: 0.5vmax 1vmax;
   background-color: #d7fffed2;
 }
@@ -216,7 +215,6 @@
   color: rgb(158, 158, 158);
   margin: 1vmax;
 }
-/* slider css */
 @media (max-width : 1000px) {
 
   .shop{

@@ -45,7 +45,6 @@ body:has(dialog[open]) {
   height: 100%;
   border: 0.5px solid #aeaeae3e;
   border-radius: 5px;
-  /* position: relative; */
 }
 ._cross {
   z-index: 1;
@@ -60,8 +59,6 @@ dialog::backdrop {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
-  /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -191,7 +188,6 @@ dialog::backdrop {
   margin-left: 8%;
   display: flex;
   align-items: flex-start;
-  /* font-size: 1px; */
   font-size: 1vmax;
   font-weight: 500;
 }
@@ -325,7 +321,6 @@ dialog::backdrop {
   top: 3.5%;
   right: 5%;
   width: 3vmax;
-  /* padding: 1vmax vmax 0.2vmax 0.2vmax; */
   padding: 0.7vmax 0.8vmax 0.7vmax 0.7vmax;
   cursor: pointer;
   height: 3vmax;
@@ -476,9 +471,6 @@ dialog::backdrop {
   display: none !important;
 }
 
-/* * {
-  text-decoration: none;
-} */
 ._productCardP {
   color: black;
   width: 19vmax;

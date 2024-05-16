@@ -3,9 +3,6 @@
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  /* max-height: 100vh; */
-  /* overflow: hidden; */
-  /* position: sticky; */
 }
 ._admin-panel-product-id {
   color: rgb(16, 25, 29);

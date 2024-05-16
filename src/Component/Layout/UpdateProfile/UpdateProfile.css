@@ -190,9 +190,8 @@
   pointer-events: none;
   opacity: 0.3;
   transition: 0.3s ease-in;
-} */
+} 
 
-/* helper classes */
 
  ._valid-password {
   max-height: 0vmax;
