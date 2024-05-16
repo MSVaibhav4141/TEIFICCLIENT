@@ -1,12 +1,13 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL})
 
 export const updateProfile = createAsyncThunk(
   "user/update",
   async (userData, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "multipart/form-data" } };
-      const { data } = await axios.put(
+      const { data } = await axiosInstance.put(
         `/VC1/self/update/profile`,
         userData,
         config
@@ -23,7 +24,7 @@ export const updateUserPassword = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "application/json" } };
-      const { data } = await axios.put(
+      const { data } = await axiosInstance.put(
         `/VC1/self/reset/password`,
         userData,
         config
@@ -46,7 +47,7 @@ export const forgetUserPassword = createAsyncThunk(
   async (email, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "application/json" } };
-      const { data } = await axios.post(
+      const { data } = await axiosInstance.post(
         `/VC1/password/passRecovery`,
         email,
         config
@@ -64,7 +65,7 @@ export const resetUserPassword = createAsyncThunk(
   async ({ token, userData }, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "application/json" } };
-      const { data } = await axios.put(
+      const { data } = await axiosInstance.put(
         `/VC1/password/reset/${token}`,
         userData,
         config

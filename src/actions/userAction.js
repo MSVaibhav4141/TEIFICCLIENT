@@ -1,5 +1,6 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
+const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL})
 
 // LOGIN
 
@@ -8,7 +9,7 @@ export const loginUser = createAsyncThunk(
   async ({ loginEmail, loginPassword }, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "application/json" } };
-      const { data } = await axios.post(
+      const { data } = await axiosInstance.post(
         `/VC1/login`,
         { email: loginEmail, password: loginPassword },
         config
@@ -26,7 +27,7 @@ export const signUpUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "multipart/form-data" } };
-      const { data } = await axios.post(`/VC1/register`, userData, config);
+      const { data } = await axiosInstance.post(`/VC1/register`, userData, config);
       return data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -40,7 +41,7 @@ export const loadUser = createAsyncThunk(
   "user/load",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(`/VC1/self`);
+      const { data } = await axiosInstance.get(`/VC1/self`);
       return data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -52,7 +53,7 @@ export const getAllUsers = createAsyncThunk(
   "admin/alluser",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(`/VC1/admin/users`);
+      const { data } = await axiosInstance.get(`/VC1/admin/users`);
       return data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -65,7 +66,7 @@ export const getUserDetails = createAsyncThunk(
   "admin/singleUser",
   async (id, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(`/VC1/admin/users/${id}`);
+      const { data } = await axiosInstance.get(`/VC1/admin/users/${id}`);
       return data.user;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -79,7 +80,7 @@ export const updateUser = createAsyncThunk(
   async ({ id, userData }, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "application/json" } };
-      const { data } = await axios.put(
+      const { data } = await axiosInstance.put(
         `/VC1/admin/users/${id}`,
         userData,
         config
@@ -98,7 +99,7 @@ export const deleteUser = createAsyncThunk(
   "admin/singleUser/delete",
   async (id, { rejectWithValue }) => {
     try {
-      const { data } = await axios.delete(`/VC1/admin/users/${id}`);
+      const { data } = await axiosInstance.delete(`/VC1/admin/users/${id}`);
       return data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -111,7 +112,7 @@ export const addItemToCart = createAsyncThunk(
   async ({ id, cartItemNo }, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "application/json" } };
-      const { data } = await axios.post(`/VC1/add/cart/${id}`, {cartItemNo}, config);
+      const { data } = await axiosInstance.post(`/VC1/add/cart/${id}`, {cartItemNo}, config);
       return data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -123,7 +124,7 @@ export const getCartItem = createAsyncThunk(
   "user/get/cart",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get(`/VC1/get/cart`);
+      const { data } = await axiosInstance.get(`/VC1/get/cart`);
       return data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -137,7 +138,7 @@ export const logoutUser = createAsyncThunk(
   "/user/logout",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post("/VC1/logout");
+      const { data } = await axiosInstance.post("/VC1/logout");
       return data;
     } catch (err) {
       return rejectWithValue(err.response.data);
