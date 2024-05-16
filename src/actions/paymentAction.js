@@ -1,13 +1,12 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL})
 
 export const paymentInitator = createAsyncThunk(
     "product/checkout/payment",
     async (amount, { rejectWithValue }) => {
       try {
 
-        const { data } = await axiosInstance.post(`/VC1/checkout`, {amount});
+        const { data } = await axios.post(`/VC1/checkout`, {amount});
   
         return data;
       } catch (err) {

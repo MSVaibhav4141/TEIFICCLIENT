@@ -1,12 +1,11 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL})
 
 export const checkEligibiltyForReview = createAsyncThunk(
   "review/isEligible/review",
   async ({ id }, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance.get(`/VC1/review/eligible/${id}`);
+      const { data } = await axios.get(`/VC1/review/eligible/${id}`);
 
       return data;
     } catch (err) {
@@ -23,7 +22,7 @@ export const newReview = createAsyncThunk(
       const config = {
         headers: { "Content-Type": "application/json" },
       };
-      const { data } = await axiosInstance.put(`/VC1/review/`, reviewData, config);
+      const { data } = await axios.put(`/VC1/review/`, reviewData, config);
 
       return data.success;
     } catch (err) {
@@ -37,7 +36,7 @@ export const allReviewForProduct = createAsyncThunk(
   "review/all/",
   async (id, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance.get(`/VC1/reviews/${id}`);
+      const { data } = await axios.get(`/VC1/reviews/${id}`);
 
       return data;
     } catch (err) {
@@ -52,7 +51,7 @@ export const deleteReview = createAsyncThunk(
   async ({ id, reviewId }, { rejectWithValue }) => {
     try {
       const params = { revId: reviewId };
-      const { data } = await axiosInstance.delete(`/VC1/reviews/${id}`, {params});
+      const { data } = await axios.delete(`/VC1/reviews/${id}`, {params});
       return data.success;
     } catch (err) {
       return rejectWithValue(err.response);

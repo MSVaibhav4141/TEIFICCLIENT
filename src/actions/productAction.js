@@ -1,6 +1,5 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
-const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL})
 
 // creating new product
 export const createNewProduct = createAsyncThunk(
@@ -8,7 +7,7 @@ export const createNewProduct = createAsyncThunk(
   async (productData, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "multipart/form-data" } };
-      const { data } = await axiosInstance.post(
+      const { data } = await axios.post(
         `/VC1/admin/products/new`,
         productData,
         config
@@ -28,7 +27,7 @@ export const editProduct = createAsyncThunk(
   async ({ id, editedData }, { rejectWithValue }) => {
     try {
       const config = { headers: { "Content-Type": "multipart/form-data" } };
-      const { data } = await axiosInstance.put(
+      const { data } = await axios.put(
         `/VC1/admin/products/${id}`,
         editedData,
         config
@@ -64,7 +63,7 @@ export const getProducts = createAsyncThunk(
     if (category) {
       link = `/VC1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${priceFilter1.min}&price[lte]=${priceFilter1.max}&category=${category}&ratings[gte]=${rating}`;
     }
-    const { data } = await axiosInstance.get(link);
+    const { data } = await axios.get(link);
     return data;
   }
 );
@@ -72,7 +71,7 @@ export const getProducts = createAsyncThunk(
 export const getProductDetail = createAsyncThunk(
   "products/getProductDetail",
   async (pid) => {
-    const { data } = await axiosInstance.get(`/VC1/products/${pid}`);
+    const { data } = await axios.get(`/VC1/products/${pid}`);
     return data;
   }
 );
@@ -81,7 +80,7 @@ export const getAllProductAdmin = createAsyncThunk(
   "products/admin/all",
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance.get(`/VC1/admin/products/getall`);
+      const { data } = await axios.get(`/VC1/admin/products/getall`);
       return data;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -94,7 +93,7 @@ export const deleteProduct = createAsyncThunk(
   "products/admin/delete",
   async (id, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance.delete(`/VC1/admin/products/${id}`);
+      const { data } = await axios.delete(`/VC1/admin/products/${id}`);
       return data.success;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -107,7 +106,7 @@ export const getAllReviews = createAsyncThunk(
   "products/admin/allreview",
   async (id, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance.get(`/VC1/reviews/${id}`);
+      const { data } = await axios.get(`/VC1/reviews/${id}`);
       return data.reviews;
     } catch (err) {
       return rejectWithValue(err.response.data);
@@ -120,7 +119,7 @@ export const deleteReviews = createAsyncThunk(
   "products/admin/deleteReview",
   async ({id,reviewId}, { rejectWithValue }) => {
     try {
-      const { data } = await axiosInstance.delete(`/VC1/reviews/${id}?revId=${reviewId}`);
+      const { data } = await axios.delete(`/VC1/reviews/${id}?revId=${reviewId}`);
       return data.success;
     } catch (err) {
       return rejectWithValue(err.response.data);
