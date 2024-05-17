@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL})
+const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL, withCredentials:true})
 
 // Create Order
 export const createOrder = createAsyncThunk(

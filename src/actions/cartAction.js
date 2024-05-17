@@ -3,7 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // Add to Cart
 
-const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL})
+const axiosInstance = axios.create({baseURL:process.env.REACT_APP_API_URL, withCredentials:true})
 export const cartItem = createAsyncThunk(
   "product/cart", 
   async ({ id, cartItemNo }, { getState, rejectWithValue }) => {
