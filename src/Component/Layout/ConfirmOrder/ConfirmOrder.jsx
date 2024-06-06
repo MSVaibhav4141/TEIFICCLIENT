@@ -32,21 +32,23 @@ const ConfirmOrder = () => {
   const tax = subtotal * 0.18;
   const paymentButton = useRef();
   const totalPrice = subtotal + tax + shippingCharges;
-  // const orders = {
-  //   shippingInfo: {
-  //     address: shippingInfo.address,
-  //     state: shippingInfo.state,
-  //     city: shippingInfo.city,
-  //     country: shippingInfo.country,
-  //     pincode: shippingInfo.pinCode,
-  //     phoneNo: shippingInfo.phoneNo,
-  //   },
-  //   orderItems: cartItem,
-  //   itemsPrice: subtotal,
-  //   taxPrice: tax,
-  //   shippingPrice: shippingCharges,
-  //   totalPrice,
-  // };
+    const orders = {
+    shippingInfo: {
+      address: shippingInfo.address,
+      state: shippingInfo.state,
+      city: shippingInfo.city,
+      country: shippingInfo.country,
+      pincode: shippingInfo.pinCode,
+      phoneNo: shippingInfo.phoneNo,
+    },
+    orderItems: cartItem,
+    itemsPrice: subtotal,
+    paymentMethod:paymentMeth,
+    taxPrice: tax,
+    shippingPrice: shippingCharges,
+    totalPrice,
+  };
+const addressO = JSON.stringify(orders);
   const address = `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.state}, ${shippingInfo.pinCode}, ${shippingInfo.country}`;
   const proceedToPayment = async () => {
     if (paymentMeth === "" || paymentMeth === undefined) {
@@ -77,7 +79,7 @@ const ConfirmOrder = () => {
         image:
           "https://i.ibb.co/YtRn0G0/Teific-Technology-Private-limited-1.png",
         order_id: order.id,
-        callback_url: "http://localhost:4000/VC1/paymentVerification",
+        callback_url: `http://213.210.37.127:4000/VC1/paymentVerification?address=${addressO}`,
         prefill: {
           name: "Gaurav Kumar",
           email: "gaurav.kumar@example.com",
@@ -95,7 +97,7 @@ const ConfirmOrder = () => {
 
       dispatch(reset());
     }
-  }, [dispatch, loading, paymentError, order, paymentMeth]);
+  }, [dispatch, loading, paymentError, order, paymentMeth, addressO]);
   const handlePaymentWay = (e) => {
     if (e.target.value === "OnlinePayment") {
       setPaymentMeth("OnlinePayment");
