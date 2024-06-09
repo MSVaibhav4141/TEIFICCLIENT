@@ -79,7 +79,7 @@ const addressO = JSON.stringify(orders);
         image:
           "https://i.ibb.co/YtRn0G0/Teific-Technology-Private-limited-1.png",
         order_id: order.id,
-        callback_url: `http://213.210.37.127:4000/VC1/paymentVerification?address=${addressO}`,
+        callback_url: `https://api.teific.in/VC1/paymentVerification?address=${addressO}`,
         prefill: {
           name: "Gaurav Kumar",
           email: "gaurav.kumar@example.com",
